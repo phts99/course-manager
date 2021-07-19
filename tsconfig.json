@@ -20,6 +20,13 @@
       "es2018",
       "dom"
     ]
+// File '/home/pedro/DIO/angular/course-manager/src/app/courses/course copy.ts' not found.
+// The file is in the program because:
+// Matched by include pattern '**/* ' in '/home/pedro/DIO/angular/course-manager/tsconfig.json' ts [1, 1]
+
+//    "resolveJsonModule": true, 
+//    "esModuleInterop": true   
+
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
