@@ -3,7 +3,8 @@ import { Course } from "./course";
 import { CourseService } from "./course.service";
 
 @Component({
-    selector: 'app-course-list',
+//    selector: 'app-course-list', ** selector is now only used to reference this component in another component
+//                                 ** component is now being referenced via routing
     templateUrl: './course-list.component.html',
 })
 
