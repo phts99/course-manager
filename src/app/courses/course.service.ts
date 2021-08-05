@@ -1,4 +1,6 @@
+import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { Observable } from "rxjs";
 // import { rootCertificates } from "tls";
 import { Course } from "./course";
 
@@ -7,14 +9,16 @@ import { Course } from "./course";
 })
 
 export class CourseService {
+
+    private coursesUrl: string = 'http://localhost:3100/api/courses';
+
+    constructor(private httpClient: HttpClient) {}
     
-    retrieveAll(): Course[] {
-        return COURSES;
+    retrieveAll(): Observable<Course[]> {
+        return this.httpClient.get<Course[]>(this.coursesUrl);
     }
     
     retrieveById(id: number) : Course {
-        // non-null assertion operator -> ! at the end of the method operation
-        // assures the ts compiler that the outcome will not be null even though it seems like it could be
         return COURSES.find((courseIterator: Course) => courseIterator.id === id)!;
     }
 
